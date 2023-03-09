@@ -1,0 +1,62 @@
+<!DOCTYPE html> <html><head>
+        <title>5.P Starter Code [Elizabeth ]</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #17d3ff;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>What kind of animal are you?</h1>
+           
+             <p>         </p>
+      <img src="https://i.ytimg.com/vi/EzXKa1xMVss/maxresdefault.jpg">
+        </div>
+       
+        <div class="questions">
+            
+            <h4>How many pets do you have?</h4> 
+           
+            <input class="question1">
+             <p>         </p>
+            <img src="https://townsquare.media/site/723/files/2021/02/pets_RS14836_167580039.jpg?w=980&amp;q=75">
+            <h4>Do you prefer a domesticated or non-domesticated animal?</h4>
+               <input class="question2">
+             <p>         </p>
+            <img src="https://media.istockphoto.com/id/1176783121/photo/large-group-of-african-safari-animals-wildlife-conservation-concept.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=8x48KOVZUTmyeRrov2n0ujmvirT9-FsQzmmLC_0qaY0=">
+       
+        </div>
+       <button> Click here! </button>
+        <div class="result">
+            this is where the user will see their quiz result!
+        </div>
+
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var button = document.querySelector("button");
+
+button.onclick = function () {
+  var Q1 = document.querySelector(".question1").value;
+  var Q2 = document.querySelector(".question2").value;
+  console.log(Q1);
+  console.log(Q2);
+
+  if (Q1 <= 3 && Q2 === "Domesticated") {
+    document.querySelector(".result").innerHTML = "    You have " + Q1 + " pets " + "   and you prefer " + Q2 + "   This means you are a Dog  ";
+  } else if (Q1 > 4 && Q2 === "Non-domesticated") {
+    document.querySelector(".result").innerHTML = "  You have " + Q1 + " pets " + "   and you prefer " + Q2 + "   This means you are a Monkey  ";
+  } else if (Q1 <= 3 && Q2 === "Non-domesticated") {
+    document.querySelector(".result").innerHTML = "You have " + Q1 + " pets " + "   and you prefer " + Q2 + "   This means you are a Lion  ";
+  } else if (Q1 > 4 && Q2 === "Domesticated") {
+    document.querySelector(".result").innerHTML = "You have " + Q1 + " pets " + "   and you prefer " + Q2 + "   This means you are a Pig  ";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsIm9uY2xpY2siLCJRMSIsInZhbHVlIiwiUTIiLCJjb25zb2xlIiwibG9nIiwiaW5uZXJIVE1MIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxNQUFNLEdBQUNDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixRQUF2QixDQUFYOztBQUVDRixNQUFNLENBQUNHLE9BQVAsR0FBaUIsWUFBVztBQUMzQixNQUFJQyxFQUFFLEdBQUNILFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixZQUF2QixFQUFxQ0csS0FBNUM7QUFDRyxNQUFJQyxFQUFFLEdBQUNMLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixZQUF2QixFQUFxQ0csS0FBNUM7QUFDQUUsRUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVlKLEVBQVo7QUFDQUcsRUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVlGLEVBQVo7O0FBRUMsTUFBSUYsRUFBRSxJQUFJLENBQU4sSUFBWUUsRUFBRSxLQUFLLGNBQXZCLEVBQXlDO0FBQ3hDTCxJQUFBQSxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsRUFBa0NPLFNBQWxDLEdBQTRDLGtCQUFxQkwsRUFBckIsR0FBMkIsUUFBM0IsR0FBd0Msb0JBQXhDLEdBQWdFRSxFQUFoRSxHQUF1RSwrQkFBbkg7QUFDQSxHQUZELE1BSU8sSUFBSUYsRUFBRSxHQUFHLENBQUwsSUFBVUUsRUFBRSxLQUFLLGtCQUFyQixFQUNMO0FBQ0RMLElBQUFBLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixFQUFrQ08sU0FBbEMsR0FBNEMsZ0JBQW1CTCxFQUFuQixHQUF5QixRQUF6QixHQUFzQyxvQkFBdEMsR0FBOERFLEVBQTlELEdBQXFFLGtDQUFqSDtBQUNBLEdBSE0sTUFLQSxJQUFJRixFQUFFLElBQUksQ0FBTixJQUFhRSxFQUFFLEtBQUssa0JBQXhCLEVBQ0w7QUFDREwsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDTyxTQUFsQyxHQUE0QyxjQUFpQkwsRUFBakIsR0FBdUIsUUFBdkIsR0FBb0Msb0JBQXBDLEdBQTRERSxFQUE1RCxHQUFtRSxnQ0FBL0c7QUFBaUosR0FGM0ksTUFJRixJQUFJRixFQUFFLEdBQUcsQ0FBTCxJQUFXRSxFQUFFLEtBQUssY0FBdEIsRUFDTDtBQUNDTCxJQUFBQSxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsRUFBa0NPLFNBQWxDLEdBQTRDLGNBQWlCTCxFQUFqQixHQUF1QixRQUF2QixHQUFvQyxvQkFBcEMsR0FBNERFLEVBQTVELEdBQW1FLCtCQUEvRztBQUFnSjtBQUVySixDQXZCRCIsInNvdXJjZXNDb250ZW50IjpbImxldCBidXR0b249ZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcImJ1dHRvblwiKTtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiBidXR0b24ub25jbGljayA9IGZ1bmN0aW9uKCkge1xuICBsZXQgUTE9ZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5xdWVzdGlvbjFcIikudmFsdWU7XG4gICAgIGxldCBRMj1kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnF1ZXN0aW9uMlwiKS52YWx1ZTtcbiAgICAgY29uc29sZS5sb2coUTEpO1xuICAgICBjb25zb2xlLmxvZyhRMik7XG4gICAgIFxuICAgICAgaWYgKFExIDw9IDMgICYmIFEyID09PSBcIkRvbWVzdGljYXRlZFwiICApIHtcbiAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5pbm5lckhUTUw9XCIgICAgWW91IGhhdmUgXCIgICArICBRMSAgKyBcIiBwZXRzIFwiICArICBcIiAgIGFuZCB5b3UgcHJlZmVyIFwiICsgIFEyICArICBcIiAgIFRoaXMgbWVhbnMgeW91IGFyZSBhIERvZyAgXCI7IFxuICAgICAgfVxuICAgICAgICAgIFxuICAgICAgICBlbHNlIGlmIChRMSA+IDQgJiYgUTIgPT09IFwiTm9uLWRvbWVzdGljYXRlZFwiICkgXG4gICAgICAgIHtcbiAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5pbm5lckhUTUw9XCIgIFlvdSBoYXZlIFwiICAgKyAgUTEgICsgXCIgcGV0cyBcIiAgKyAgXCIgICBhbmQgeW91IHByZWZlciBcIiArICBRMiAgKyAgXCIgICBUaGlzIG1lYW5zIHlvdSBhcmUgYSBNb25rZXkgIFwiOyBcbiAgICAgIH1cbiBcbiAgICAgICAgZWxzZSBpZiAoUTEgPD0gMyAgICYmIFEyID09PSBcIk5vbi1kb21lc3RpY2F0ZWRcIiApIFxuICAgICAgICB7XG4gICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuaW5uZXJIVE1MPVwiWW91IGhhdmUgXCIgICArICBRMSAgKyBcIiBwZXRzIFwiICArICBcIiAgIGFuZCB5b3UgcHJlZmVyIFwiICsgIFEyICArICBcIiAgIFRoaXMgbWVhbnMgeW91IGFyZSBhIExpb24gIFwiO31cbiBcbiAgICAgIGVsc2UgaWYgKFExID4gNCAgJiYgUTIgPT09IFwiRG9tZXN0aWNhdGVkXCIgKSBcbiAgICAgIHtcbiAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5pbm5lckhUTUw9XCJZb3UgaGF2ZSBcIiAgICsgIFExICArIFwiIHBldHMgXCIgICsgIFwiICAgYW5kIHlvdSBwcmVmZXIgXCIgKyAgUTIgICsgIFwiICAgVGhpcyBtZWFucyB5b3UgYXJlIGEgUGlnICBcIjt9XG4gICAgIFxuIH07ICAgICAgICAgICJdfQ==</script></body></html>
